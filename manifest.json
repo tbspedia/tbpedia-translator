@@ -1,0 +1,10 @@
+{
+	"id": "v2tbpedia-translator",
+	"name": "True Buddha Translator",
+	"version": "2.0.0",
+	"minAppVersion": "1.12.0",
+	"description": "真佛百科翻譯器.",
+	"author": "真佛百科",
+	"authorUrl": "https://www.tbpedia.org",
+	"isDesktopOnly": false
+}

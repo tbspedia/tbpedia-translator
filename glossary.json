@@ -1,0 +1,70 @@
+{
+    "version":  1,
+    "revision":  2,
+    "entries":  [
+                    {
+                        "id":  "true-buddha-school",
+                        "source":  "真佛宗",
+                        "sourceLang":  "zh-TW",
+                        "targets":  {
+                                        "en":  "True Buddha School",
+                                        "ja":  "真佛宗",
+                                        "zh-TW":  "真佛宗"
+                                    },
+                        "aliases":  [
+                                        "真佛密宗"
+                                    ],
+                        "match":  "contains",
+                        "caseSensitive":  false,
+                        "enabled":  true,
+                        "priority":  100
+                    },
+                    {
+                        "id":  "root-guru",
+                        "source":  "根本上師",
+                        "sourceLang":  "zh-TW",
+                        "targets":  {
+                                        "en":  "Root Guru",
+                                        "ja":  "根本上師",
+                                        "zh-TW":  "根本上師"
+                                    },
+                        "aliases":  [
+                                        "根本傳承上師"
+                                    ],
+                        "match":  "contains",
+                        "caseSensitive":  false,
+                        "enabled":  true,
+                        "priority":  90
+                    },
+                    {
+                        "id":  "term001",
+                        "source":  "大禮拜",
+                        "sourceLang":  "zh-TW",
+                        "targets":  {
+                                        "en":  "Great Bowing"
+                                    },
+                        "aliases":  [
+                                        "禮拜"
+                                    ],
+                        "match":  "contains",
+                        "caseSensitive":  false,
+                        "enabled":  true,
+                        "priority":  90
+                    },
+                    {
+                        "id":  "term002",
+                        "source":  "南方寶生佛",
+                        "sourceLang":  "zh-TW",
+                        "targets":  {
+                                        "en":  "Ratnasambhava Buddha of the South"
+                                    },
+                        "aliases":  [
+
+                                    ],
+                        "match":  "contains",
+                        "caseSensitive":  false,
+                        "enabled":  true,
+                        "priority":  90
+                    }
+                ]
+}
