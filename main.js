@@ -242,6 +242,9 @@ const STRINGS = {
     glossaryEmpty: 'No active glossary terms',
     glossaryAliases: 'Aliases',
     glossaryMatch: 'Match',
+    documentation: 'Documentation',
+    documentationDesc: 'Read setup instructions and feature documentation on GitHub.',
+    openDocumentation: 'Open documentation',
     transPanelTitle: 'Translation',
     transPanelEngine: 'Translation engine',
     transPanelEngineSelection: 'Use Text Selection engine',
@@ -874,6 +877,29 @@ const FALLBACK_LOCALIZATIONS = {
 for (const [locale, [name, description]] of Object.entries(FALLBACK_LOCALIZATIONS)) {
   Object.assign(STRINGS[locale], { fallbackEngine: name, fallbackEngineDesc: description });
 }
+
+const DOCUMENTATION_LOCALIZATIONS = {
+  ja: ['ドキュメント', 'GitHub でセットアップ手順と機能の説明を確認します。', 'ドキュメントを開く'],
+  'zh-TW': ['說明文件', '在 GitHub 上閱讀設定步驟與功能說明。', '開啟說明文件'],
+  'zh-CN': ['文档', '在 GitHub 上查看设置说明和功能文档。', '打开文档'],
+  ko: ['문서', 'GitHub에서 설정 안내와 기능 문서를 확인합니다.', '문서 열기'],
+  fr: ['Documentation', 'Consultez les instructions de configuration et la documentation des fonctionnalités sur GitHub.', 'Ouvrir la documentation'],
+  es: ['Documentación', 'Consulta las instrucciones de configuración y la documentación de las funciones en GitHub.', 'Abrir documentación'],
+  de: ['Dokumentation', 'Lies die Einrichtungsanleitung und die Funktionsdokumentation auf GitHub.', 'Dokumentation öffnen'],
+  nl: ['Documentatie', 'Lees de installatie-instructies en functiedocumentatie op GitHub.', 'Documentatie openen'],
+  sv: ['Dokumentation', 'Läs installationsanvisningar och funktionsdokumentation på GitHub.', 'Öppna dokumentation'],
+  vi: ['Tài liệu', 'Đọc hướng dẫn thiết lập và tài liệu tính năng trên GitHub.', 'Mở tài liệu'],
+  id: ['Dokumentasi', 'Baca petunjuk penyiapan dan dokumentasi fitur di GitHub.', 'Buka dokumentasi'],
+  th: ['เอกสาร', 'อ่านคำแนะนำการตั้งค่าและเอกสารคุณสมบัติบน GitHub', 'เปิดเอกสาร'],
+};
+for (const [locale, [name, description, button]] of Object.entries(DOCUMENTATION_LOCALIZATIONS)) {
+  Object.assign(STRINGS[locale], {
+    documentation: name,
+    documentationDesc: description,
+    openDocumentation: button,
+  });
+}
+
 Object.assign(STRINGS.vi, { llmOpenai: 'API tương thích OpenAI' });
 Object.assign(STRINGS.id, { llmOpenai: 'API kompatibel OpenAI' });
 Object.assign(STRINGS.th, { llmOpenai: 'API ที่เข้ากันได้กับ OpenAI' });
@@ -2045,9 +2071,213 @@ class TranslationLog {
 }
 */
 
-// Glossary entries are deliberately stored separately from translation history.
-// The file is user-editable (normally exported from glossary-template.xlsx) and
-// has no engine-specific cache keys, so a preferred term applies everywhere.
+// Written to glossary.json every time the plugin loads.
+const DEFAULT_GLOSSARY = {
+  "version": 1,
+  "revision": 1,
+  "entries": [
+    {
+      "id": "term0001",
+      "source": "真佛宗",
+      "sourceLang": "zh-TW",
+      "targets": {
+        "en": "True Buddha School"
+      },
+      "aliases": [],
+      "match": "exact",
+      "caseSensitive": false,
+      "enabled": true,
+      "priority": 100
+    },
+    {
+      "id": "term0002",
+      "source": "蓮花童子",
+      "sourceLang": "zh-TW",
+      "targets": {
+        "en": "Padmakumara"
+      },
+      "aliases": [],
+      "match": "exact",
+      "caseSensitive": false,
+      "enabled": true,
+      "priority": 100
+    },
+    {
+      "id": "term0003",
+      "source": "大禮拜",
+      "sourceLang": "zh-TW",
+      "targets": {
+        "en": "Great Homage"
+      },
+      "aliases": [],
+      "match": "exact",
+      "caseSensitive": false,
+      "enabled": true,
+      "priority": 100
+    },
+    {
+      "id": "term0004",
+      "source": "南方寶生佛",
+      "sourceLang": "zh-TW",
+      "targets": {
+        "en": "Ratnasambhava Buddha of the South"
+      },
+      "aliases": [],
+      "match": "exact",
+      "caseSensitive": false,
+      "enabled": true,
+      "priority": 100
+    },
+    {
+      "id": "term0005",
+      "source": "瑤池金母",
+      "sourceLang": "zh-TW",
+      "targets": {
+        "en": "Golden Mother of the Jade Pond"
+      },
+      "aliases": [
+        "金母"
+      ],
+      "match": "exact",
+      "caseSensitive": false,
+      "enabled": true,
+      "priority": 100
+    },
+    {
+      "id": "term0006",
+      "source": "師尊",
+      "sourceLang": "zh-TW",
+      "targets": {
+        "en": "Grand Master"
+      },
+      "aliases": [],
+      "match": "exact",
+      "caseSensitive": false,
+      "enabled": true,
+      "priority": 100
+    },
+    {
+      "id": "term0007",
+      "source": "師母",
+      "sourceLang": "zh-TW",
+      "targets": {
+        "en": "Grand Madam"
+      },
+      "aliases": [],
+      "match": "exact",
+      "caseSensitive": false,
+      "enabled": true,
+      "priority": 100
+    },
+    {
+      "id": "term0008",
+      "source": "師佛",
+      "sourceLang": "zh-TW",
+      "targets": {
+        "en": "Guru Buddha"
+      },
+      "aliases": [],
+      "match": "exact",
+      "caseSensitive": false,
+      "enabled": true,
+      "priority": 100
+    },
+    {
+      "id": "term0009",
+      "source": "高王觀世音菩薩",
+      "sourceLang": "zh-TW",
+      "targets": {
+        "en": "High King Avalokiteshvara Bodhisattva"
+      },
+      "aliases": [],
+      "match": "exact",
+      "caseSensitive": false,
+      "enabled": true,
+      "priority": 100
+    },
+    {
+      "id": "term0010",
+      "source": "盧勝彥",
+      "sourceLang": "zh-TW",
+      "targets": {
+        "en": "Sheng-Yen Lu"
+      },
+      "aliases": [],
+      "match": "exact",
+      "caseSensitive": false,
+      "enabled": true,
+      "priority": 100
+    },
+    {
+      "id": "term0011",
+      "source": "聖尊蓮生活佛",
+      "sourceLang": "zh-TW",
+      "targets": {
+        "en": "His Holiness Living Buddha Lian Sheng"
+      },
+      "aliases": [],
+      "match": "exact",
+      "caseSensitive": false,
+      "enabled": true,
+      "priority": 100
+    },
+    {
+      "id": "term0012",
+      "source": "護摩",
+      "sourceLang": "zh-TW",
+      "targets": {
+        "en": "homa"
+      },
+      "aliases": [],
+      "match": "exact",
+      "caseSensitive": false,
+      "enabled": true,
+      "priority": 100
+    },
+    {
+      "id": "term0013",
+      "source": "真佛宗傳承祖師",
+      "sourceLang": "zh-TW",
+      "targets": {
+        "en": "lineage gurus of True Buddha School"
+      },
+      "aliases": [],
+      "match": "exact",
+      "caseSensitive": false,
+      "enabled": true,
+      "priority": 100
+    },
+    {
+      "id": "term0014",
+      "source": "華光自在佛",
+      "sourceLang": "zh-TW",
+      "targets": {
+        "en": "Lotus Light Perfect Ease Buddha"
+      },
+      "aliases": [],
+      "match": "exact",
+      "caseSensitive": false,
+      "enabled": true,
+      "priority": 100
+    },
+    {
+      "id": "term0015",
+      "source": "大力金剛",
+      "sourceLang": "zh-TW",
+      "targets": {
+        "en": "Mahabala"
+      },
+      "aliases": [],
+      "match": "exact",
+      "caseSensitive": false,
+      "enabled": true,
+      "priority": 100
+    }
+  ]
+};
+
+// Glossary entries are stored independently of translation history and have no
+// engine-specific cache keys, so a preferred term applies everywhere.
 class GlossaryStore {
   constructor(app, pluginDir) {
     this.app = app;
@@ -2060,7 +2290,10 @@ class GlossaryStore {
     this.entries = [];
     this.revision = 0;
     try {
-      if (!(await this.app.vault.adapter.exists(this.filePath))) return;
+      await this.app.vault.adapter.write(
+        this.filePath,
+        JSON.stringify(DEFAULT_GLOSSARY, null, 2)
+      );
       const data = JSON.parse(await this.app.vault.adapter.read(this.filePath));
       if (!data || data.version !== 1 || !Array.isArray(data.entries)) {
         throw new Error('expected version 1 with an entries array');
@@ -4735,7 +4968,15 @@ class MouseTooltipSettingTab extends PluginSettingTab {
     const { containerEl } = this;
     containerEl.empty();
     const s = i18n();
-    containerEl.createEl('h2', { text: s.settingsTitle });
+    containerEl.createEl('h2', { text: 'True Buddha Translator' });
+
+    new Setting(containerEl)
+      .setName(s.documentation)
+      .setDesc(s.documentationDesc)
+      .addButton((button) => button
+        .setButtonText(s.openDocumentation)
+        .setCta()
+        .onClick(() => window.open('https://github.com/tbspedia/tbpedia-translator/blob/main/README.md')));
 
     // ---- UI Language ----
     new Setting(containerEl)

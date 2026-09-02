@@ -1,58 +1,54 @@
 {
     "version":  1,
-    "revision":  2,
+    "revision":  1,
     "entries":  [
                     {
-                        "id":  "true-buddha-school",
+                        "id":  "term0001",
                         "source":  "真佛宗",
                         "sourceLang":  "zh-TW",
                         "targets":  {
-                                        "en":  "True Buddha School",
-                                        "ja":  "真佛宗",
-                                        "zh-TW":  "真佛宗"
+                                        "en":  "True Buddha School"
                                     },
                         "aliases":  [
-                                        "真佛密宗"
+
                                     ],
-                        "match":  "contains",
+                        "match":  "exact",
                         "caseSensitive":  false,
                         "enabled":  true,
                         "priority":  100
                     },
                     {
-                        "id":  "root-guru",
-                        "source":  "根本上師",
+                        "id":  "term0002",
+                        "source":  "蓮花童子",
                         "sourceLang":  "zh-TW",
                         "targets":  {
-                                        "en":  "Root Guru",
-                                        "ja":  "根本上師",
-                                        "zh-TW":  "根本上師"
+                                        "en":  "Padmakumara"
                                     },
                         "aliases":  [
-                                        "根本傳承上師"
+
                                     ],
-                        "match":  "contains",
+                        "match":  "exact",
                         "caseSensitive":  false,
                         "enabled":  true,
-                        "priority":  90
+                        "priority":  100
                     },
                     {
-                        "id":  "term001",
+                        "id":  "term0003",
                         "source":  "大禮拜",
                         "sourceLang":  "zh-TW",
                         "targets":  {
-                                        "en":  "Great Bowing"
+                                        "en":  "Great Homage"
                                     },
                         "aliases":  [
-                                        "禮拜"
+
                                     ],
-                        "match":  "contains",
+                        "match":  "exact",
                         "caseSensitive":  false,
                         "enabled":  true,
-                        "priority":  90
+                        "priority":  100
                     },
                     {
-                        "id":  "term002",
+                        "id":  "term0004",
                         "source":  "南方寶生佛",
                         "sourceLang":  "zh-TW",
                         "targets":  {
@@ -61,10 +57,175 @@
                         "aliases":  [
 
                                     ],
-                        "match":  "contains",
+                        "match":  "exact",
                         "caseSensitive":  false,
                         "enabled":  true,
-                        "priority":  90
+                        "priority":  100
+                    },
+                    {
+                        "id":  "term0005",
+                        "source":  "瑤池金母",
+                        "sourceLang":  "zh-TW",
+                        "targets":  {
+                                        "en":  "Golden Mother of the Jade Pond"
+                                    },
+                        "aliases":  [
+                                        "金母"
+                                    ],
+                        "match":  "exact",
+                        "caseSensitive":  false,
+                        "enabled":  true,
+                        "priority":  100
+                    },
+                    {
+                        "id":  "term0006",
+                        "source":  "師尊",
+                        "sourceLang":  "zh-TW",
+                        "targets":  {
+                                        "en":  "Grand Master"
+                                    },
+                        "aliases":  [
+
+                                    ],
+                        "match":  "exact",
+                        "caseSensitive":  false,
+                        "enabled":  true,
+                        "priority":  100
+                    },
+                    {
+                        "id":  "term0007",
+                        "source":  "師母",
+                        "sourceLang":  "zh-TW",
+                        "targets":  {
+                                        "en":  "Grand Madam"
+                                    },
+                        "aliases":  [
+
+                                    ],
+                        "match":  "exact",
+                        "caseSensitive":  false,
+                        "enabled":  true,
+                        "priority":  100
+                    },
+                    {
+                        "id":  "term0008",
+                        "source":  "師佛",
+                        "sourceLang":  "zh-TW",
+                        "targets":  {
+                                        "en":  "Guru Buddha"
+                                    },
+                        "aliases":  [
+
+                                    ],
+                        "match":  "exact",
+                        "caseSensitive":  false,
+                        "enabled":  true,
+                        "priority":  100
+                    },
+                    {
+                        "id":  "term0009",
+                        "source":  "高王觀世音菩薩",
+                        "sourceLang":  "zh-TW",
+                        "targets":  {
+                                        "en":  "High King Avalokiteshvara Bodhisattva"
+                                    },
+                        "aliases":  [
+
+                                    ],
+                        "match":  "exact",
+                        "caseSensitive":  false,
+                        "enabled":  true,
+                        "priority":  100
+                    },
+                    {
+                        "id":  "term0010",
+                        "source":  "盧勝彥",
+                        "sourceLang":  "zh-TW",
+                        "targets":  {
+                                        "en":  "Sheng-Yen Lu"
+                                    },
+                        "aliases":  [
+
+                                    ],
+                        "match":  "exact",
+                        "caseSensitive":  false,
+                        "enabled":  true,
+                        "priority":  100
+                    },
+                    {
+                        "id":  "term0011",
+                        "source":  "聖尊蓮生活佛",
+                        "sourceLang":  "zh-TW",
+                        "targets":  {
+                                        "en":  "His Holiness Living Buddha Lian Sheng"
+                                    },
+                        "aliases":  [
+
+                                    ],
+                        "match":  "exact",
+                        "caseSensitive":  false,
+                        "enabled":  true,
+                        "priority":  100
+                    },
+                    {
+                        "id":  "term0012",
+                        "source":  "護摩",
+                        "sourceLang":  "zh-TW",
+                        "targets":  {
+                                        "en":  "homa"
+                                    },
+                        "aliases":  [
+
+                                    ],
+                        "match":  "exact",
+                        "caseSensitive":  false,
+                        "enabled":  true,
+                        "priority":  100
+                    },
+                    {
+                        "id":  "term0013",
+                        "source":  "真佛宗傳承祖師",
+                        "sourceLang":  "zh-TW",
+                        "targets":  {
+                                        "en":  "lineage gurus of True Buddha School"
+                                    },
+                        "aliases":  [
+
+                                    ],
+                        "match":  "exact",
+                        "caseSensitive":  false,
+                        "enabled":  true,
+                        "priority":  100
+                    },
+                    {
+                        "id":  "term0014",
+                        "source":  "華光自在佛",
+                        "sourceLang":  "zh-TW",
+                        "targets":  {
+                                        "en":  "Lotus Light Perfect Ease Buddha"
+                                    },
+                        "aliases":  [
+
+                                    ],
+                        "match":  "exact",
+                        "caseSensitive":  false,
+                        "enabled":  true,
+                        "priority":  100
+                    },
+                    {
+                        "id":  "term0015",
+                        "source":  "大力金剛",
+                        "sourceLang":  "zh-TW",
+                        "targets":  {
+                                        "en":  "Mahabala"
+                                    },
+                        "aliases":  [
+
+                                    ],
+                        "match":  "exact",
+                        "caseSensitive":  false,
+                        "enabled":  true,
+                        "priority":  100
                     }
                 ]
 }
