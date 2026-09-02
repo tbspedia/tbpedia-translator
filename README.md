@@ -80,6 +80,7 @@ An `exact` glossary match returns the preferred target translation without calli
 
 Click the book icon in the ribbon or run **"Open glossary"** to browse active terms, aliases, matching modes, and translations. Use the refresh button after changing `glossary.json`.
 
+Don't manually edit and add the glossary.json file because the glossary will be updated from the Github site. You can email to editor@tbpedia.org for feedback and recommendation of new glossary
 ---
 
 ## Settings
