@@ -1,4 +1,4 @@
-# Tbpedia Translator
+# True Buddha Translator
 
 > **"The complete collection of wondrous wisdom, enlightening the mind and realizing the nature, begins from this point."**
 > A translation plugin for Obsidian that suppport True Buddha Pedia contents.
