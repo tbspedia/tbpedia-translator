@@ -21,7 +21,7 @@ Assign the best engine independently for hover, text selection, and full-page tr
 
 ---
 
-## What's New in v1.0.0
+## What's New in v1.0.1
 
 ---
 
@@ -109,21 +109,26 @@ Don't manually edit and add the glossary.json file because the glossary will be 
 
 ## Translation Engines
 
-The default engine is Google.
+The engine list fully mirrors the reference Chrome extension (v0.1.246). 
+
+The default engine is google.
 
 Experimental engines may stop working due to upstream service changes.
 
 | Engine | Notes |
 | --- | --- |
-| Google | Default. Supports dictionary entries and transliteration |
-| Google GTX | Alternative Google endpoint |
-| DeepL | Experimental web endpoint |
-| Bing | Experimental web endpoint |
-| Yandex | Experimental web endpoint |
-| Papago | Experimental web endpoint |
-| OpenAI-compatible API | Any server implementing the OpenAI Chat Completions API. Requires API URL and model name. API key and custom prompt template are also configurable |
-| Ollama | Local inference via Ollama. Requires a running Ollama server and model name |
-| LM Studio | Local inference via LM Studio. Requires a running LM Studio server and model name |
+| google | Default. Supports dictionary entries and transliteration, refer as translate_a/single. |
+| bing | Web endpoint |
+| LLM - OpenAI / Claude / Gemini / Local | OpenAI-compatible chat completions with provider presets (see below) |
+| deepl | Experimental web endpoint |
+| yandex | Experimental web endpoint |
+| baidu | Experimental web endpoint |
+| papago | Experimental web endpoint |
+| browser API | Chromium built-in Translator API (requires Chrome 138+ runtime; may be unavailable in Obsidian) |
+| googleWebImage | Shows the first Google image search hit for the hovered word |
+| googleGTX | Alternative Google endpoint, refer as translate_a/t |
+| googleWeb | Google dictionary definition ("meaning:") scrape |
+| googleV2 | Google batchexecute endpoint, refer as Google V2 ( experimental) |
 
 ### LLM Engine Settings
 
@@ -131,11 +136,10 @@ When an LLM engine (OpenAI-compatible / Ollama / LM Studio) is selected for any 
 
 | Setting | Description |
 | --- | --- |
-| API URL | Base URL of the server (e.g. `https://api.openai.com`, `http://localhost:11434`) |
-| API Key | API key (OpenAI-compatible only; leave blank for local servers) |
-| Model | Model name to use for translation |
-| Temperature | Generation randomness. `0` = deterministic, `2` = maximum randomness. Default: `0` |
-| Prompt template | Custom prompt template. Use `{{text}}` for source text and `{{targetLang}}` for the target language name. Leave blank to use the built-in default |
+| LLM Provider | Custom / OpenAI (ChatGPT) / Claude (Anthropic) / Gemini (Google) / Grok (xAI) / Groq / OpenRouter / GitHub Models / Ollama (local) / LM Studio (local). Choosing a preset fills in the endpoint URL; settings per provider are remembered and restored when switching |
+| LLM API Endpoint URL | OpenAI-compatible base URL including the version path (e.g. `https://api.openai.com/v1`). Editable only for Custom |
+| LLM API Key | API key (leave blank for local servers) |
+| LLM Model | Model name. The ↻ button fetches the model list from the endpoint using the API key so you can pick one |
 
 ---
 
@@ -173,11 +177,16 @@ This plugin is desktop-only.
 - Translation requests are sent to the selected translation service.
 - Obsidian's `requestUrl` API is used for network requests.
 - Experimental engines may become unstable due to upstream service changes.
+- Tbpedia translator disable the Translation history and vocabular list functions.
 - The plugin is fork from https://github.com/amanetoki7/mouse-tooltip-translator , customise to support the translation of True Buddha Pedia contents.
+
+---
+Change log
+V1.0.0 - The first release of Tbpedia Translator , required use BRAT or manually install the plugin from Github.
+V1.0.1 - Redesign the glosssary.json installtion methods where it no longer embedded in main.js file and install the glossary file from github and if the local version is not the newer from github, it will auto download from background. The current glossary.json version is 1 and revision is 3.
 ---
 
 ## License
-
 MIT License
 
 ---
