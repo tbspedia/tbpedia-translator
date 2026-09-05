@@ -182,8 +182,11 @@ This plugin is desktop-only.
 
 ---
 Change log
+
 V1.0.0 - The first release of Tbpedia Translator , required use BRAT or manually install the plugin from Github.
+
 V1.0.1 - Redesign the glosssary.json installtion methods where it no longer embedded in main.js file and install the glossary file from github and if the local version is not the newer from github, it will auto download from background. The current glossary.json version is 1 and revision is 3.
+
 ---
 
 ## License
