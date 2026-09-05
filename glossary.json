@@ -1,6 +1,6 @@
 {
     "version":  1,
-    "revision":  1,
+    "revision":  3,
     "entries":  [
                     {
                         "id":  "term0001",
@@ -218,6 +218,156 @@
                         "sourceLang":  "zh-TW",
                         "targets":  {
                                         "en":  "Mahabala"
+                                    },
+                        "aliases":  [
+
+                                    ],
+                        "match":  "exact",
+                        "caseSensitive":  false,
+                        "enabled":  true,
+                        "priority":  100
+                    },
+                    {
+                        "id":  "term0016",
+                        "source":  "馬來西亞真佛宗密教總會",
+                        "sourceLang":  "zh-TW",
+                        "targets":  {
+                                        "en":  "The Federation of True Buddha School Malaysia"
+                                    },
+                        "aliases":  [
+                                        "馬密總"
+                                    ],
+                        "match":  "exact",
+                        "caseSensitive":  false,
+                        "enabled":  true,
+                        "priority":  100
+                    },
+                    {
+                        "id":  "term0017",
+                        "source":  "修法儀軌",
+                        "sourceLang":  "zh-TW",
+                        "targets":  {
+                                        "en":  "practice procedure"
+                                    },
+                        "aliases":  [
+
+                                    ],
+                        "match":  "exact",
+                        "caseSensitive":  false,
+                        "enabled":  true,
+                        "priority":  100
+                    },
+                    {
+                        "id":  "term0018",
+                        "source":  "般若",
+                        "sourceLang":  "zh-TW",
+                        "targets":  {
+                                        "en":  "prajna"
+                                    },
+                        "aliases":  [
+                                        "別炸"
+                                    ],
+                        "match":  "exact",
+                        "caseSensitive":  false,
+                        "enabled":  true,
+                        "priority":  100
+                    },
+                    {
+                        "id":  "term0019",
+                        "source":  "疏文",
+                        "sourceLang":  "zh-TW",
+                        "targets":  {
+                                        "en":  "prayer of intent"
+                                    },
+                        "aliases":  [
+
+                                    ],
+                        "match":  "exact",
+                        "caseSensitive":  false,
+                        "enabled":  true,
+                        "priority":  100
+                    },
+                    {
+                        "id":  "term0020",
+                        "source":  "頂禮",
+                        "sourceLang":  "zh-TW",
+                        "targets":  {
+                                        "en":  "prostrate in homage"
+                                    },
+                        "aliases":  [
+
+                                    ],
+                        "match":  "exact",
+                        "caseSensitive":  false,
+                        "enabled":  true,
+                        "priority":  100
+                    },
+                    {
+                        "id":  "term0021",
+                        "source":  "五燈會元",
+                        "sourceLang":  "zh-TW",
+                        "targets":  {
+                                        "en":  "A Compendium of the Five Lamps"
+                                    },
+                        "aliases":  [
+
+                                    ],
+                        "match":  "exact",
+                        "caseSensitive":  false,
+                        "enabled":  true,
+                        "priority":  100
+                    },
+                    {
+                        "id":  "term0022",
+                        "source":  "三十六萬億一十一萬九千五百同名同號阿彌陀佛",
+                        "sourceLang":  "zh-TW",
+                        "targets":  {
+                                        "en":  "36 trillion 119 thousand and 500 Amitabha Buddhas of the same name"
+                                    },
+                        "aliases":  [
+
+                                    ],
+                        "match":  "exact",
+                        "caseSensitive":  false,
+                        "enabled":  true,
+                        "priority":  100
+                    },
+                    {
+                        "id":  "term0023",
+                        "source":  "摩頂",
+                        "sourceLang":  "zh-TW",
+                        "targets":  {
+                                        "en":  "blessing bestowed on the crown of one\u0027s head"
+                                    },
+                        "aliases":  [
+                                        "摸頂"
+                                    ],
+                        "match":  "exact",
+                        "caseSensitive":  false,
+                        "enabled":  true,
+                        "priority":  100
+                    },
+                    {
+                        "id":  "term0024",
+                        "source":  "總持灌頂",
+                        "sourceLang":  "zh-TW",
+                        "targets":  {
+                                        "en":  "all-inclusive empowerment"
+                                    },
+                        "aliases":  [
+
+                                    ],
+                        "match":  "exact",
+                        "caseSensitive":  false,
+                        "enabled":  true,
+                        "priority":  100
+                    },
+                    {
+                        "id":  "term0025",
+                        "source":  "降頭",
+                        "sourceLang":  "zh-TW",
+                        "targets":  {
+                                        "en":  "black magic"
                                     },
                         "aliases":  [
 
