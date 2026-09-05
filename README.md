@@ -19,6 +19,10 @@ No need to switch to a browser. Simply hover over a word or sentence and a popup
 
 Assign the best engine independently for hover, text selection, and full-page translation.
 
+### 3. A translation based on the control vocab from True Buddha School of Network Administarion
+The current glossarry is refer to the English translation vocab from Traditional Chinese published at https://truebuddhaschool.org/listofterms .
+The glossary.json version 1 , revision 3 only containt a limited vocab where it will be expand in the near future. We will welcome contribution of translation to other languages as well.
+
 ---
 
 ## What's New in v1.0.1
@@ -30,7 +34,6 @@ Assign the best engine independently for hover, text selection, and full-page tr
 - Hover translation for words and sentences
 - Translation of selected text
 - **Full-page translation in Reading View**
-- **Glossary sidebar** — browse active glossary terms and their translations
 - Choose trigger: mouseover / text selection / both
 - Choose hover unit: word / sentence
 - **Per-context engine selection** — assign different engines for hover, selection, and page translation
@@ -50,6 +53,7 @@ Assign the best engine independently for hover, text selection, and full-page tr
   - Hide tooltip
   - Toggle translation on/off
   - Translate selected text
+  - Open translayion panel
   - **Translate current page**
   - **Restore original (page translation)**
   - **Open glossary**
