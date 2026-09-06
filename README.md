@@ -1,4 +1,4 @@
-# True Buddha Translator
+# True Buddha Pedia Translator
 
 > **"The complete collection of wondrous wisdom, enlightening the mind and realizing the nature, begins from this point."**
 > A translation plugin for Obsidian that suppport True Buddha Pedia contents.
@@ -210,6 +210,7 @@ V1.0.4
 - Static capability check confirms Google: 254 targets (249 live entries plus compatible aliases), Bing: 142 including legacy aliases, Papago: 17, Baidu: 28, DeepL: 39, Yandex: 96.
 - Sort the language order by ISO language code
 V1.0.5
+- Change the Plugin Name from True Buddha Translator to True Buddha Pedia Translator (真佛翻譯器）
 - Add the Translation engine language support Table
 - Fixed the hover translation
 - Fixed the restoration of translated page at one-off restore
