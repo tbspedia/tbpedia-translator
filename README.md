@@ -189,16 +189,20 @@ Change log
 
 V1.0.0 
 - The first release of Tbpedia Translator , required use BRAT or manually install the plugin from Github.
+  
 V1.0.1 
 - Redesign the glosssary.json installtion methods where it no longer embedded in main.js file and install the glossary file from github and if the local version is not the newer from github, it will auto download from background. The current glossary.json version is 1 and revision is 3.
+  
 V1.0.2
 - Removed the embedded glossary from main.js
 - It downloads and replaces the local file only when:- remote version is higher, or versions match and remote revision is higher.
 The old embedded-glossary sync script was removed because it is no longer needed.
+
 V1.0.3 
 - Disable the master switch
 - change the fallback list as below: 'deepl', 'googleGTX', 'bing', 'baidu'
 - Display error message when hot rate-limit from translation engine
+  
 V1.0.4
 - Make a major update on the supported language for each translation engine web endpoint.
 - Expanded the canonical picker to 285 entries including Auto Detect.
@@ -209,6 +213,7 @@ V1.0.4
 - Capability filters now prevent Microsoft/Yandex-only codes from appearing under Google.
 - Static capability check confirms Google: 254 targets (249 live entries plus compatible aliases), Bing: 142 including legacy aliases, Papago: 17, Baidu: 28, DeepL: 39, Yandex: 96.
 - Sort the language order by ISO language code
+  
 V1.0.5
 - Change the Plugin Name from True Buddha Translator to True Buddha Pedia Translator (真佛翻譯器）
 - Add the Translation engine language support Table
