@@ -1,6 +1,6 @@
 {
     "version":  1,
-    "revision":  4,
+    "revision":  5,
     "entries":  [
                     {
                         "id":  "term0001",
@@ -12,7 +12,7 @@
                         "aliases":  [
 
                                     ],
-                        "match":  "exact",
+                        "match":  "contains",
                         "caseSensitive":  false,
                         "enabled":  true,
                         "priority":  100
@@ -27,7 +27,7 @@
                         "aliases":  [
 
                                     ],
-                        "match":  "exact",
+                        "match":  "contains",
                         "caseSensitive":  false,
                         "enabled":  true,
                         "priority":  100
@@ -42,7 +42,7 @@
                         "aliases":  [
 
                                     ],
-                        "match":  "exact",
+                        "match":  "contains",
                         "caseSensitive":  false,
                         "enabled":  true,
                         "priority":  100
@@ -57,7 +57,7 @@
                         "aliases":  [
 
                                     ],
-                        "match":  "exact",
+                        "match":  "contains",
                         "caseSensitive":  false,
                         "enabled":  true,
                         "priority":  100
@@ -72,7 +72,7 @@
                         "aliases":  [
                                         "金母"
                                     ],
-                        "match":  "exact",
+                        "match":  "contains",
                         "caseSensitive":  false,
                         "enabled":  true,
                         "priority":  100
@@ -87,7 +87,7 @@
                         "aliases":  [
 
                                     ],
-                        "match":  "exact",
+                        "match":  "contains",
                         "caseSensitive":  false,
                         "enabled":  true,
                         "priority":  100
@@ -102,7 +102,7 @@
                         "aliases":  [
 
                                     ],
-                        "match":  "exact",
+                        "match":  "contains",
                         "caseSensitive":  false,
                         "enabled":  true,
                         "priority":  100
@@ -117,7 +117,7 @@
                         "aliases":  [
 
                                     ],
-                        "match":  "exact",
+                        "match":  "contains",
                         "caseSensitive":  false,
                         "enabled":  true,
                         "priority":  100
@@ -132,7 +132,7 @@
                         "aliases":  [
 
                                     ],
-                        "match":  "exact",
+                        "match":  "contains",
                         "caseSensitive":  false,
                         "enabled":  true,
                         "priority":  100
@@ -147,7 +147,7 @@
                         "aliases":  [
 
                                     ],
-                        "match":  "exact",
+                        "match":  "contains",
                         "caseSensitive":  false,
                         "enabled":  true,
                         "priority":  100
@@ -162,7 +162,7 @@
                         "aliases":  [
 
                                     ],
-                        "match":  "exact",
+                        "match":  "contains",
                         "caseSensitive":  false,
                         "enabled":  true,
                         "priority":  100
@@ -177,7 +177,7 @@
                         "aliases":  [
 
                                     ],
-                        "match":  "exact",
+                        "match":  "contains",
                         "caseSensitive":  false,
                         "enabled":  true,
                         "priority":  100
@@ -192,7 +192,7 @@
                         "aliases":  [
 
                                     ],
-                        "match":  "exact",
+                        "match":  "contains",
                         "caseSensitive":  false,
                         "enabled":  true,
                         "priority":  100
@@ -207,7 +207,7 @@
                         "aliases":  [
 
                                     ],
-                        "match":  "exact",
+                        "match":  "contains",
                         "caseSensitive":  false,
                         "enabled":  true,
                         "priority":  100
@@ -222,7 +222,7 @@
                         "aliases":  [
 
                                     ],
-                        "match":  "exact",
+                        "match":  "contains",
                         "caseSensitive":  false,
                         "enabled":  true,
                         "priority":  100
@@ -237,7 +237,7 @@
                         "aliases":  [
                                         "馬密總"
                                     ],
-                        "match":  "exact",
+                        "match":  "contains",
                         "caseSensitive":  false,
                         "enabled":  true,
                         "priority":  100
@@ -252,7 +252,7 @@
                         "aliases":  [
 
                                     ],
-                        "match":  "exact",
+                        "match":  "contains",
                         "caseSensitive":  false,
                         "enabled":  true,
                         "priority":  100
@@ -267,7 +267,7 @@
                         "aliases":  [
                                         "別炸"
                                     ],
-                        "match":  "exact",
+                        "match":  "contains",
                         "caseSensitive":  false,
                         "enabled":  true,
                         "priority":  100
@@ -282,7 +282,7 @@
                         "aliases":  [
 
                                     ],
-                        "match":  "exact",
+                        "match":  "contains",
                         "caseSensitive":  false,
                         "enabled":  true,
                         "priority":  100
@@ -297,7 +297,7 @@
                         "aliases":  [
 
                                     ],
-                        "match":  "exact",
+                        "match":  "contains",
                         "caseSensitive":  false,
                         "enabled":  true,
                         "priority":  100
@@ -312,7 +312,7 @@
                         "aliases":  [
 
                                     ],
-                        "match":  "exact",
+                        "match":  "contains",
                         "caseSensitive":  false,
                         "enabled":  true,
                         "priority":  100
@@ -327,7 +327,7 @@
                         "aliases":  [
 
                                     ],
-                        "match":  "exact",
+                        "match":  "contains",
                         "caseSensitive":  false,
                         "enabled":  true,
                         "priority":  100
@@ -342,7 +342,7 @@
                         "aliases":  [
                                         "摸頂"
                                     ],
-                        "match":  "exact",
+                        "match":  "contains",
                         "caseSensitive":  false,
                         "enabled":  true,
                         "priority":  100
@@ -357,7 +357,7 @@
                         "aliases":  [
 
                                     ],
-                        "match":  "exact",
+                        "match":  "contains",
                         "caseSensitive":  false,
                         "enabled":  true,
                         "priority":  100
@@ -372,7 +372,7 @@
                         "aliases":  [
 
                                     ],
-                        "match":  "exact",
+                        "match":  "contains",
                         "caseSensitive":  false,
                         "enabled":  true,
                         "priority":  100
@@ -387,7 +387,7 @@
                         "aliases":  [
 
                                     ],
-                        "match":  "exact",
+                        "match":  "contains",
                         "caseSensitive":  false,
                         "enabled":  true,
                         "priority":  100
@@ -402,7 +402,7 @@
                         "aliases":  [
 
                                     ],
-                        "match":  "exact",
+                        "match":  "contains",
                         "caseSensitive":  false,
                         "enabled":  true,
                         "priority":  100
@@ -417,7 +417,7 @@
                         "aliases":  [
 
                                     ],
-                        "match":  "exact",
+                        "match":  "contains",
                         "caseSensitive":  false,
                         "enabled":  true,
                         "priority":  100
@@ -432,7 +432,7 @@
                         "aliases":  [
 
                                     ],
-                        "match":  "exact",
+                        "match":  "contains",
                         "caseSensitive":  false,
                         "enabled":  true,
                         "priority":  100
@@ -447,7 +447,7 @@
                         "aliases":  [
 
                                     ],
-                        "match":  "exact",
+                        "match":  "contains",
                         "caseSensitive":  false,
                         "enabled":  true,
                         "priority":  100
@@ -462,7 +462,7 @@
                         "aliases":  [
 
                                     ],
-                        "match":  "exact",
+                        "match":  "contains",
                         "caseSensitive":  false,
                         "enabled":  true,
                         "priority":  100
@@ -477,7 +477,7 @@
                         "aliases":  [
 
                                     ],
-                        "match":  "exact",
+                        "match":  "contains",
                         "caseSensitive":  false,
                         "enabled":  true,
                         "priority":  100
@@ -492,7 +492,7 @@
                         "aliases":  [
 
                                     ],
-                        "match":  "exact",
+                        "match":  "contains",
                         "caseSensitive":  false,
                         "enabled":  true,
                         "priority":  100
@@ -507,7 +507,7 @@
                         "aliases":  [
 
                                     ],
-                        "match":  "exact",
+                        "match":  "contains",
                         "caseSensitive":  false,
                         "enabled":  true,
                         "priority":  100
@@ -522,7 +522,7 @@
                         "aliases":  [
 
                                     ],
-                        "match":  "exact",
+                        "match":  "contains",
                         "caseSensitive":  false,
                         "enabled":  true,
                         "priority":  100
@@ -537,7 +537,7 @@
                         "aliases":  [
 
                                     ],
-                        "match":  "exact",
+                        "match":  "contains",
                         "caseSensitive":  false,
                         "enabled":  true,
                         "priority":  100
@@ -552,7 +552,7 @@
                         "aliases":  [
 
                                     ],
-                        "match":  "exact",
+                        "match":  "contains",
                         "caseSensitive":  false,
                         "enabled":  true,
                         "priority":  100
@@ -567,7 +567,7 @@
                         "aliases":  [
 
                                     ],
-                        "match":  "exact",
+                        "match":  "contains",
                         "caseSensitive":  false,
                         "enabled":  true,
                         "priority":  100
@@ -582,7 +582,7 @@
                         "aliases":  [
 
                                     ],
-                        "match":  "exact",
+                        "match":  "contains",
                         "caseSensitive":  false,
                         "enabled":  true,
                         "priority":  100
@@ -597,7 +597,7 @@
                         "aliases":  [
 
                                     ],
-                        "match":  "exact",
+                        "match":  "contains",
                         "caseSensitive":  false,
                         "enabled":  true,
                         "priority":  100
@@ -612,7 +612,7 @@
                         "aliases":  [
 
                                     ],
-                        "match":  "exact",
+                        "match":  "contains",
                         "caseSensitive":  false,
                         "enabled":  true,
                         "priority":  100
@@ -627,7 +627,7 @@
                         "aliases":  [
 
                                     ],
-                        "match":  "exact",
+                        "match":  "contains",
                         "caseSensitive":  false,
                         "enabled":  true,
                         "priority":  100
@@ -642,7 +642,7 @@
                         "aliases":  [
 
                                     ],
-                        "match":  "exact",
+                        "match":  "contains",
                         "caseSensitive":  false,
                         "enabled":  true,
                         "priority":  100
@@ -657,7 +657,7 @@
                         "aliases":  [
 
                                     ],
-                        "match":  "exact",
+                        "match":  "contains",
                         "caseSensitive":  false,
                         "enabled":  true,
                         "priority":  100
@@ -672,7 +672,7 @@
                         "aliases":  [
 
                                     ],
-                        "match":  "exact",
+                        "match":  "contains",
                         "caseSensitive":  false,
                         "enabled":  true,
                         "priority":  100
@@ -687,7 +687,7 @@
                         "aliases":  [
 
                                     ],
-                        "match":  "exact",
+                        "match":  "contains",
                         "caseSensitive":  false,
                         "enabled":  true,
                         "priority":  100
@@ -702,7 +702,7 @@
                         "aliases":  [
 
                                     ],
-                        "match":  "exact",
+                        "match":  "contains",
                         "caseSensitive":  false,
                         "enabled":  true,
                         "priority":  100
@@ -717,7 +717,7 @@
                         "aliases":  [
 
                                     ],
-                        "match":  "exact",
+                        "match":  "contains",
                         "caseSensitive":  false,
                         "enabled":  true,
                         "priority":  100
@@ -732,7 +732,7 @@
                         "aliases":  [
 
                                     ],
-                        "match":  "exact",
+                        "match":  "contains",
                         "caseSensitive":  false,
                         "enabled":  true,
                         "priority":  100
@@ -747,7 +747,7 @@
                         "aliases":  [
 
                                     ],
-                        "match":  "exact",
+                        "match":  "contains",
                         "caseSensitive":  false,
                         "enabled":  true,
                         "priority":  100
