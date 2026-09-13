@@ -1,6 +1,6 @@
 {
     "version":  1,
-    "revision":  3,
+    "revision":  4,
     "entries":  [
                     {
                         "id":  "term0001",
@@ -368,6 +368,381 @@
                         "sourceLang":  "zh-TW",
                         "targets":  {
                                         "en":  "black magic"
+                                    },
+                        "aliases":  [
+
+                                    ],
+                        "match":  "exact",
+                        "caseSensitive":  false,
+                        "enabled":  true,
+                        "priority":  100
+                    },
+                    {
+                        "id":  "term0026",
+                        "source":  "真佛百科",
+                        "sourceLang":  "zh-TW",
+                        "targets":  {
+                                        "en":  "True Buddha Pedia"
+                                    },
+                        "aliases":  [
+
+                                    ],
+                        "match":  "exact",
+                        "caseSensitive":  false,
+                        "enabled":  true,
+                        "priority":  100
+                    },
+                    {
+                        "id":  "term0027",
+                        "source":  "蓮生活佛盧勝彥",
+                        "sourceLang":  "zh-TW",
+                        "targets":  {
+                                        "en":  "His Holiness Living Buddha Lian Sheng, Sheng-Yen Lu"
+                                    },
+                        "aliases":  [
+
+                                    ],
+                        "match":  "exact",
+                        "caseSensitive":  false,
+                        "enabled":  true,
+                        "priority":  100
+                    },
+                    {
+                        "id":  "term0028",
+                        "source":  "蓮生活佛盧勝彥文集",
+                        "sourceLang":  "zh-TW",
+                        "targets":  {
+                                        "en":  "The Collected Works of Living Buddha Lian Sheng (Sheng-Yen Lu)"
+                                    },
+                        "aliases":  [
+
+                                    ],
+                        "match":  "exact",
+                        "caseSensitive":  false,
+                        "enabled":  true,
+                        "priority":  100
+                    },
+                    {
+                        "id":  "term0029",
+                        "source":  "真佛行者",
+                        "sourceLang":  "zh-TW",
+                        "targets":  {
+                                        "en":  "True Buddha Practitioner"
+                                    },
+                        "aliases":  [
+
+                                    ],
+                        "match":  "exact",
+                        "caseSensitive":  false,
+                        "enabled":  true,
+                        "priority":  100
+                    },
+                    {
+                        "id":  "term0030",
+                        "source":  "學佛者",
+                        "sourceLang":  "zh-TW",
+                        "targets":  {
+                                        "en":  "Buddhist Learner"
+                                    },
+                        "aliases":  [
+
+                                    ],
+                        "match":  "exact",
+                        "caseSensitive":  false,
+                        "enabled":  true,
+                        "priority":  100
+                    },
+                    {
+                        "id":  "term0031",
+                        "source":  "修行者",
+                        "sourceLang":  "zh-TW",
+                        "targets":  {
+                                        "en":  "Spiritual Practitioner"
+                                    },
+                        "aliases":  [
+
+                                    ],
+                        "match":  "exact",
+                        "caseSensitive":  false,
+                        "enabled":  true,
+                        "priority":  100
+                    },
+                    {
+                        "id":  "term0032",
+                        "source":  "導讀者",
+                        "sourceLang":  "zh-TW",
+                        "targets":  {
+                                        "en":  "Study Facilitator"
+                                    },
+                        "aliases":  [
+
+                                    ],
+                        "match":  "exact",
+                        "caseSensitive":  false,
+                        "enabled":  true,
+                        "priority":  100
+                    },
+                    {
+                        "id":  "term0033",
+                        "source":  "一般讀者",
+                        "sourceLang":  "zh-TW",
+                        "targets":  {
+                                        "en":  "General Reader"
+                                    },
+                        "aliases":  [
+
+                                    ],
+                        "match":  "exact",
+                        "caseSensitive":  false,
+                        "enabled":  true,
+                        "priority":  100
+                    },
+                    {
+                        "id":  "term0034",
+                        "source":  "簡易版",
+                        "sourceLang":  "zh-TW",
+                        "targets":  {
+                                        "en":  "Simplified Edition"
+                                    },
+                        "aliases":  [
+
+                                    ],
+                        "match":  "exact",
+                        "caseSensitive":  false,
+                        "enabled":  true,
+                        "priority":  100
+                    },
+                    {
+                        "id":  "term0035",
+                        "source":  "基礎版",
+                        "sourceLang":  "zh-TW",
+                        "targets":  {
+                                        "en":  "Essential Edition"
+                                    },
+                        "aliases":  [
+
+                                    ],
+                        "match":  "exact",
+                        "caseSensitive":  false,
+                        "enabled":  true,
+                        "priority":  100
+                    },
+                    {
+                        "id":  "term0036",
+                        "source":  "進階版",
+                        "sourceLang":  "zh-TW",
+                        "targets":  {
+                                        "en":  "Expanded Edition"
+                                    },
+                        "aliases":  [
+
+                                    ],
+                        "match":  "exact",
+                        "caseSensitive":  false,
+                        "enabled":  true,
+                        "priority":  100
+                    },
+                    {
+                        "id":  "term0037",
+                        "source":  "高級版",
+                        "sourceLang":  "zh-TW",
+                        "targets":  {
+                                        "en":  "Advanced Edition"
+                                    },
+                        "aliases":  [
+
+                                    ],
+                        "match":  "exact",
+                        "caseSensitive":  false,
+                        "enabled":  true,
+                        "priority":  100
+                    },
+                    {
+                        "id":  "term0038",
+                        "source":  "弘法版",
+                        "sourceLang":  "zh-TW",
+                        "targets":  {
+                                        "en":  "Dharma Outreach Edition"
+                                    },
+                        "aliases":  [
+
+                                    ],
+                        "match":  "exact",
+                        "caseSensitive":  false,
+                        "enabled":  true,
+                        "priority":  100
+                    },
+                    {
+                        "id":  "term0039",
+                        "source":  "文集部",
+                        "sourceLang":  "zh-TW",
+                        "targets":  {
+                                        "en":  "Collected Works Section"
+                                    },
+                        "aliases":  [
+
+                                    ],
+                        "match":  "exact",
+                        "caseSensitive":  false,
+                        "enabled":  true,
+                        "priority":  100
+                    },
+                    {
+                        "id":  "term0040",
+                        "source":  "開示部",
+                        "sourceLang":  "zh-TW",
+                        "targets":  {
+                                        "en":  "Dharma Discourse Section"
+                                    },
+                        "aliases":  [
+
+                                    ],
+                        "match":  "exact",
+                        "caseSensitive":  false,
+                        "enabled":  true,
+                        "priority":  100
+                    },
+                    {
+                        "id":  "term0041",
+                        "source":  "經藏部",
+                        "sourceLang":  "zh-TW",
+                        "targets":  {
+                                        "en":  "Sutra Pitaka Section"
+                                    },
+                        "aliases":  [
+
+                                    ],
+                        "match":  "exact",
+                        "caseSensitive":  false,
+                        "enabled":  true,
+                        "priority":  100
+                    },
+                    {
+                        "id":  "term0042",
+                        "source":  "頌與戒律",
+                        "sourceLang":  "zh-TW",
+                        "targets":  {
+                                        "en":  "Hymns \u0026 Precepts"
+                                    },
+                        "aliases":  [
+
+                                    ],
+                        "match":  "exact",
+                        "caseSensitive":  false,
+                        "enabled":  true,
+                        "priority":  100
+                    },
+                    {
+                        "id":  "term0043",
+                        "source":  "傳法部",
+                        "sourceLang":  "zh-TW",
+                        "targets":  {
+                                        "en":  "Dharma Transmission Section"
+                                    },
+                        "aliases":  [
+
+                                    ],
+                        "match":  "exact",
+                        "caseSensitive":  false,
+                        "enabled":  true,
+                        "priority":  100
+                    },
+                    {
+                        "id":  "term0044",
+                        "source":  "佛語典藏",
+                        "sourceLang":  "zh-TW",
+                        "targets":  {
+                                        "en":  "Buddha\u0027s Words Treasury"
+                                    },
+                        "aliases":  [
+
+                                    ],
+                        "match":  "exact",
+                        "caseSensitive":  false,
+                        "enabled":  true,
+                        "priority":  100
+                    },
+                    {
+                        "id":  "term0045",
+                        "source":  "密法\u0026儀軌",
+                        "sourceLang":  "zh-TW",
+                        "targets":  {
+                                        "en":  "Tantric Practices \u0026 Ritual Liturgies"
+                                    },
+                        "aliases":  [
+
+                                    ],
+                        "match":  "exact",
+                        "caseSensitive":  false,
+                        "enabled":  true,
+                        "priority":  100
+                    },
+                    {
+                        "id":  "term0046",
+                        "source":  "其他類別",
+                        "sourceLang":  "zh-TW",
+                        "targets":  {
+                                        "en":  "Other Categories"
+                                    },
+                        "aliases":  [
+
+                                    ],
+                        "match":  "exact",
+                        "caseSensitive":  false,
+                        "enabled":  true,
+                        "priority":  100
+                    },
+                    {
+                        "id":  "term0047",
+                        "source":  "蓮香上師",
+                        "sourceLang":  "zh-TW",
+                        "targets":  {
+                                        "en":  "Master Lian Xiang"
+                                    },
+                        "aliases":  [
+
+                                    ],
+                        "match":  "exact",
+                        "caseSensitive":  false,
+                        "enabled":  true,
+                        "priority":  100
+                    },
+                    {
+                        "id":  "term0048",
+                        "source":  "真佛般若藏",
+                        "sourceLang":  "zh-TW",
+                        "targets":  {
+                                        "en":  "True Buddha Prajna Treasury"
+                                    },
+                        "aliases":  [
+
+                                    ],
+                        "match":  "exact",
+                        "caseSensitive":  false,
+                        "enabled":  true,
+                        "priority":  100
+                    },
+                    {
+                        "id":  "term0049",
+                        "source":  "百字明咒",
+                        "sourceLang":  "zh-TW",
+                        "targets":  {
+                                        "en":  "Hundred Syllable Mantra"
+                                    },
+                        "aliases":  [
+
+                                    ],
+                        "match":  "exact",
+                        "caseSensitive":  false,
+                        "enabled":  true,
+                        "priority":  100
+                    },
+                    {
+                        "id":  "term0050",
+                        "source":  "如法",
+                        "sourceLang":  "zh-TW",
+                        "targets":  {
+                                        "en":  "in accord with Dharma"
                                     },
                         "aliases":  [
 
