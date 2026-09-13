@@ -1,6 +1,6 @@
 {
     "version":  1,
-    "revision":  5,
+    "revision":  6,
     "entries":  [
                     {
                         "id":  "term0001",
@@ -743,6 +743,21 @@
                         "sourceLang":  "zh-TW",
                         "targets":  {
                                         "en":  "in accord with Dharma"
+                                    },
+                        "aliases":  [
+
+                                    ],
+                        "match":  "contains",
+                        "caseSensitive":  false,
+                        "enabled":  true,
+                        "priority":  100
+                    },
+                    {
+                        "id":  "term0051",
+                        "source":  "初皈依者",
+                        "sourceLang":  "zh-TW",
+                        "targets":  {
+                                        "en":  "Newly Initiated Disciple"
                                     },
                         "aliases":  [
 
