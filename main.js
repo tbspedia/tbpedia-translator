@@ -3230,8 +3230,9 @@ class GlossaryStore {
       }).sort((a, b) => b.length - a.length || b.priority - a.priority);
       const hit = lineHits.get(cursor) || hits[0];
       if (!hit) { output += text[cursor++]; continue; }
-      const token = `⟪MTTG${replacements.length}⟫`;
-      replacements.push({ token, targetText: hit.targetText });
+      const index = replacements.length;
+      const token = `[MTTG${index}]`;
+      replacements.push({ index, token, targetText: hit.targetText });
       output += token;
       cursor += hit.length;
     }
@@ -3251,11 +3252,11 @@ class GlossaryStore {
     }
     if (!result?.targetText || !prepared.replacements.length) return result;
     let targetText = result.targetText;
-    for (const { token, targetText: replacement } of prepared.replacements) {
-      // Translation services normally preserve these uncommon markers. Allow
-      // harmless spaces inside them as a defensive recovery for LLM output.
-      const marker = new RegExp(token.replace(/[⟪⟫]/g, '\\$&').replace(/MTTG(\d+)/, 'MTTG\\s*$1\\s*'), 'g');
-      targetText = targetText.replace(marker, replacement);
+    for (const { index, targetText: replacement } of prepared.replacements) {
+      // Allow optional or localized brackets and harmless spaces in case a
+      // translation engine (e.g. Yandex, Baidu, or an LLM) rewrites delimiters.
+      const marker = new RegExp(`(?:[\\[【⟪«《]\\s*)?MTTG\\s*${index}(?!\\d)(?:\\s*[\\]】⟫»》])?`, 'gi');
+      targetText = targetText.replace(marker, () => replacement);
     }
     return { ...result, targetText, glossaryMatch: targetText !== result.targetText };
   }
