@@ -4011,6 +4011,7 @@ class PageTranslator {
     this._progressEl = null;
     this._observer = null;
     this._translations = new Map();
+    this._translatedElements = new Set();
     this._sessionId = 0;
     this._pendingBlocks = new WeakSet();
     this._translatedFilePath = null;
@@ -4300,6 +4301,37 @@ class PageTranslator {
     if (this._progressEl) { this._progressEl.remove(); this._progressEl = null; }
   }
 
+  _getRestoreRoots(view, container) {
+    const roots = new Set();
+    if (container) roots.add(container);
+    const sections = view?.previewMode?.renderer?.sections;
+    if (Array.isArray(sections)) {
+      for (const section of sections) {
+        if (section?.el) roots.add(section.el);
+      }
+    }
+    return [...roots];
+  }
+
+  _collectTranslatedMarkers(roots, filePath = null) {
+    const markers = new Set();
+    for (const root of roots) {
+      if (root?.matches?.('[data-mtt-orig]')) markers.add(root);
+      if (root?.querySelectorAll) {
+        for (const el of root.querySelectorAll('[data-mtt-orig]')) {
+          markers.add(el);
+        }
+      }
+    }
+    for (const el of this._translatedElements) {
+      if (el?.hasAttribute?.('data-mtt-orig')) markers.add(el);
+    }
+    const list = [...markers];
+    return filePath == null
+      ? list
+      : list.filter(el => el.getAttribute('data-mtt-file-path') === filePath);
+  }
+
   cancel() {
     this._cancelled = true;
     this._running = false;
@@ -4313,16 +4345,17 @@ class PageTranslator {
     // Revert any blocks that were translated before cancellation
     const view = this._translationView ?? this.plugin.app.workspace.activeLeaf?.view;
     const container = this._getContainer(view);
-    if (container) {
-      container.querySelectorAll('[data-mtt-orig]').forEach(el => {
-        el.innerHTML = el.getAttribute('data-mtt-orig');
-        el.removeAttribute('data-mtt-orig');
-        el.removeAttribute('data-mtt-target');
-        el.removeAttribute('data-mtt-file-path');
-        el.classList.remove('mtt-page-translated');
-      });
-      this._unwrapListLabels(container);
-    }
+    const roots = this._getRestoreRoots(view, container);
+    const markers = this._collectTranslatedMarkers(roots);
+    markers.forEach(el => {
+      el.innerHTML = el.getAttribute('data-mtt-orig');
+      el.removeAttribute('data-mtt-orig');
+      el.removeAttribute('data-mtt-target');
+      el.removeAttribute('data-mtt-file-path');
+      el.classList.remove('mtt-page-translated');
+    });
+    roots.forEach(root => this._unwrapListLabels(root));
+    this._translatedElements.clear();
     this._syncButton(view);
     this._translationView = null;
   }
@@ -4331,8 +4364,8 @@ class PageTranslator {
     const container = this._getContainer(view);
     const filePath = view?.file?.path;
     if (!container || !filePath) return false;
-    return [...container.querySelectorAll('[data-mtt-orig]')]
-      .some((el) => el.getAttribute('data-mtt-file-path') === filePath);
+    const roots = this._getRestoreRoots(view, container);
+    return this._collectTranslatedMarkers(roots, filePath).length > 0;
   }
 
   canSaveTranslation(file) {
@@ -5030,6 +5063,7 @@ class PageTranslator {
     const targetText = this._translations.get(this._translationKey(originalText));
     if (!targetText) return false;
     el.setAttribute('data-mtt-orig', el.innerHTML);
+    this._translatedElements.add(el);
     el.setAttribute('data-mtt-target', targetText);
     if (this._translationFilePath) {
       el.setAttribute('data-mtt-file-path', this._translationFilePath);
@@ -5325,6 +5359,7 @@ class PageTranslator {
     this._cancelled = false;
     this._rateLimitNotified = false;
     this._translations.clear();
+    this._translatedElements.clear();
     this._pendingBlocks = new WeakSet();
     this._translatedFilePath = null;
     this._translatedYamlProperties = null;
@@ -5580,9 +5615,8 @@ class PageTranslator {
       this._translatedNoteSnapshot = null;
       this._translationSession = null;
 
-      const translated = container.querySelectorAll('[data-mtt-orig]');
-      const currentFileMarkers = [...translated]
-        .filter(el => el.getAttribute('data-mtt-file-path') === view?.file?.path);
+      const roots = this._getRestoreRoots(view, container);
+      const currentFileMarkers = this._collectTranslatedMarkers(roots, view?.file?.path);
       const restored = currentFileMarkers.length;
       currentFileMarkers.forEach(el => {
         el.innerHTML = el.getAttribute('data-mtt-orig');
@@ -5590,8 +5624,9 @@ class PageTranslator {
         el.removeAttribute('data-mtt-target');
         el.removeAttribute('data-mtt-file-path');
         el.classList.remove('mtt-page-translated');
+        this._translatedElements.delete(el);
       });
-      this._unwrapListLabels(container);
+      roots.forEach(root => this._unwrapListLabels(root));
 
       if (restored === 0) {
         new Notice(i18n().pageNoTranslated);
