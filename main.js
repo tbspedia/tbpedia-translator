@@ -1853,33 +1853,6 @@ class BaiduEngine extends BaseTranslator {
   }
 }
 
-// Chromium's built-in on-device Translator API, when available in Obsidian's Electron.
-class BrowserAPIEngine extends BaseTranslator {
-  static detector = null;
-  static translators = {};
-  static async requestTranslate(text, src, tgt) {
-    if (typeof Translator === 'undefined' || typeof LanguageDetector === 'undefined') {
-      throw new Error('Chrome Translator API is not available in this runtime.');
-    }
-    let detectedLang = src;
-    if (src === 'auto') {
-      if (!this.detector) this.detector = await LanguageDetector.create();
-      const result = (await this.detector.detect(text))?.[0];
-      if (!result || result.confidence <= 0.5) throw new Error('Language detection failed.');
-      detectedLang = canonicalLanguageCode(result.detectedLanguage);
-    }
-    if (detectedLang === tgt) return { targetText: text, detectedLang };
-    const availability = await Translator.availability({ sourceLanguage: detectedLang, targetLanguage: tgt });
-    if (availability === 'unavailable') throw new Error(`Translator is unavailable for ${detectedLang} to ${tgt}.`);
-    const key = `${detectedLang}-${tgt}`;
-    if (!this.translators[key]) {
-      this.translators[key] = await Translator.create({ sourceLanguage: detectedLang, targetLanguage: tgt });
-    }
-    return { targetText: await this.translators[key].translate(text), detectedLang };
-  }
-  static async wrapResponse(result) { return result; }
-}
-
 // Google Web returns an English dictionary definition, not a conventional translation.
 class GoogleWebEngine extends BaseTranslator {
   static async requestTranslate(text) {
@@ -2704,7 +2677,6 @@ const ENGINE_CLASSES = {
   yandex: YandexEngine,
   baidu: BaiduEngine,
   papago: PapagoEngine,
-  browserAPI: BrowserAPIEngine,
   googleWebImage: GoogleWebImageEngine,
   googleWeb: GoogleWebEngine,
   googleV2: GoogleV2Engine,
@@ -2721,7 +2693,6 @@ const ENGINE_LABELS = {
   yandex: 'Yandex (experimental)',
   baidu: 'Baidu (experimental)',
   papago: 'Papago (experimental)',
-  browserAPI: 'Browser Translator API (experimental)',
   googleWebImage: 'Google Web Image (experimental)',
   googleWeb: 'Google Web Dictionary (experimental)',
   googleV2: 'Google V2 (experimental)',
@@ -2886,7 +2857,6 @@ function getEngineCapabilities(engineKey) {
       return googleCatalog();
     case 'googleWeb':
     case 'googleWebImage':
-    case 'browserAPI':
       return { sources: all, targets: new Set(ALL_CANONICAL_TARGET_CODES), catalog: 'bundled', live: false };
     case 'deepl': return webCatalog(DeepLEngine);
     case 'bing': return webCatalog(BingEngine);
@@ -6405,6 +6375,11 @@ module.exports = class MouseTooltipPlugin extends Plugin {
     // The dedicated legacy engine was removed. Preserve existing users' basic
     // connection details by moving it to the provider-profiled API engine.
     const removedEngineKeys = ['mouseoverEngine', 'selectionEngine', 'pageEngine'];
+    for (const key of removedEngineKeys) {
+      if (this.settings[key] === 'browserAPI') this.settings[key] = 'google';
+    }
+    if (this.settings.pageTranslationPanelEngine === 'browserAPI') this.settings.pageTranslationPanelEngine = 'pageEngine';
+    if (this.settings.translationPanelEngine === 'browserAPI') this.settings.translationPanelEngine = 'selectionEngine';
     const usedRemovedEngine = removedEngineKeys.some((key) => this.settings[key] === 'openaiCompat');
     if (usedRemovedEngine) {
       for (const key of removedEngineKeys) {
